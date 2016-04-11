@@ -4,4 +4,10 @@
     <color name="colorPrimaryDark">#3b567b</color>
     <color name="colorAccent">#FF4081</color>
     <color name="foreground_material_light">#ffffff</color>
+    <color name="background_menu">#fefefe</color>
+    <color name="separator">#e8e8e8</color>
+    <color name="link">#fd8f27</color>
+    <color name="floating_button">#fd8f27</color>
+
+    <color name="head_menu">#beced9</color>
 </resources>

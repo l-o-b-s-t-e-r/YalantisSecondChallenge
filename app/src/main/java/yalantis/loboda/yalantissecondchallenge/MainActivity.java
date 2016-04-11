@@ -15,10 +15,13 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.method.LinkMovementMethod;
+import android.text.util.Linkify;
 import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import java.util.Arrays;
 import java.util.List;
@@ -35,6 +38,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        TextView firstLinkView = (TextView)findViewById(R.id.left_link);
+        firstLinkView.setMovementMethod(LinkMovementMethod.getInstance());
+        TextView secondLinkView = (TextView)findViewById(R.id.right_link);
+        secondLinkView.setMovementMethod(LinkMovementMethod.getInstance());
 
         ActionBar actionBar = getSupportActionBar();
         if (actionBar!=null){

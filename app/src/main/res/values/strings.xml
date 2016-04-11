@@ -11,4 +11,8 @@
     
     <string name="open_menu">Open</string>
     <string name="close_menu">Close</string>
+    
+    <string name="it_ruh"><a href="www.itruh.dp.ua">IT Ruh Dnipro</a></string>
+    <string name="yalantis"><a href="https://yalantis.com">Yalantis</a></string>
+
 </resources>

@@ -9,8 +9,7 @@
 
     <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fitsSystemWindows="false">
+        android:layout_height="match_parent">
 
         <android.support.design.widget.AppBarLayout
             android:layout_width="match_parent"
@@ -53,8 +52,9 @@
 
     </android.support.design.widget.CoordinatorLayout>
 
-    <include layout="@layout/panel_menu"
-        android:layout_width="300dp"
+    <include
+        layout="@layout/panel_menu"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="start" />
 
