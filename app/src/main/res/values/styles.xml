@@ -19,4 +19,25 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="head_titel">
+        android:textStyle="bold"
+        android:id="@+id/textView"
+        android:background="@color/colorPrimary"
+        android:gravity="bottom"
+        android:paddingBottom="20dp"
+        android:textColor="@color/head_menu"
+        android:paddingLeft="@dimen/menu_margin"
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+        <item name="android:text">@string/hear_titel</item>
+        <item name="android:textSize">@dimen/head_title</item>
+    </style>
+
+    <style name="menu_item">
+
+    </style>
+
+    <style name="menu_item_image">
+
+    </style>
+
 </resources>

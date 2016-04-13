@@ -7,4 +7,11 @@
     <dimen name="margin_bottom">20dp</dimen>
     <dimen name="padding_menu">5dp</dimen>
     <dimen name="menu_margin_big">30dp</dimen>
+
+    <dimen name="head_title">30sp</dimen>
+    <dimen name="margin_left_card">30dp</dimen>
+    <dimen name="margin_top_card">30dp</dimen>
+    <dimen name="title_card">15sp</dimen>
+    <dimen name="margin_small_left_card">5dp</dimen>
+    <dimen name="margin_right_card">20dp</dimen>
 </resources>
