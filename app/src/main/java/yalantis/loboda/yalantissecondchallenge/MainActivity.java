@@ -14,6 +14,8 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.text.method.LinkMovementMethod;
 import android.text.util.Linkify;
@@ -24,6 +26,7 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -39,16 +42,18 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        TextView firstLinkView = (TextView)findViewById(R.id.left_link);
+        TextView firstLinkView = (TextView)findViewById(R.id.links);
         firstLinkView.setMovementMethod(LinkMovementMethod.getInstance());
-        TextView secondLinkView = (TextView)findViewById(R.id.right_link);
-        secondLinkView.setMovementMethod(LinkMovementMethod.getInstance());
 
         ActionBar actionBar = getSupportActionBar();
         if (actionBar!=null){
             actionBar.setDisplayHomeAsUpEnabled(true);
             actionBar.setHomeButtonEnabled(true);
         }
+
+
+
+
 
         mViewPager = (ViewPager)findViewById(R.id.viewPager);
         mDrawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
@@ -60,12 +65,14 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setText(getString(R.string.status_waiting)));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
-        List<Fragment> fragments = Arrays.asList(RecyclerViewFragment.newInstance(0),
-                                                 RecyclerViewFragment.newInstance(1),
-                                                 ListViewFragment.newInstance());
+        List<Fragment> fragments = Arrays.asList(RecyclerViewFragment.newInstance(1),
+                                                 RecyclerViewFragment.newInstance(2),
+                                                 RecyclerViewFragment.newInstance(3));
 
         FragmentStatePagerAdapter tabAdapter = new TabAdapter(fragmentManager, fragments);
         mViewPager.setAdapter(tabAdapter);
+        tabLayout.setupWithViewPager(mViewPager);
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         if (fab!=null) {
@@ -77,23 +84,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         }
-
-        tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                mViewPager.setCurrentItem(tab.getPosition());
-            }
-
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-
-            }
-        });
 
         mActionBarDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open_menu, R.string.close_menu){
             @Override
@@ -110,7 +100,6 @@ public class MainActivity extends AppCompatActivity {
         };
 
         mDrawerLayout.setDrawerListener(mActionBarDrawerToggle);
-        
     }
 
     @Override

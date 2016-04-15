@@ -94,7 +94,7 @@
         android:layout_height="wrap_content"
         android:text="Зроблено с любов'ю"
         android:id="@+id/textView7"
-        android:layout_above="@+id/left_link"
+        android:layout_above="@+id/links"
         android:textColor="@android:color/black"
         android:layout_alignLeft="@id/sign_in"/>
 
@@ -102,32 +102,11 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/it_ruh"
-        android:id="@+id/left_link"
+        android:text="@string/links"
+        android:id="@+id/links"
         android:layout_alignParentBottom="true"
         android:textColorLink="@color/link"
         android:layout_alignLeft="@id/sign_in"
         android:layout_marginBottom="@dimen/margin_bottom"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=" та "
-        android:id="@+id/and"
-        android:layout_alignBottom="@+id/left_link"
-        android:layout_toRightOf="@+id/left_link"
-        android:layout_toEndOf="@+id/left_link"
-        android:textColor="@android:color/black"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/yalantis"
-        android:id="@+id/right_link"
-        android:layout_alignBottom="@+id/left_link"
-        android:layout_toRightOf="@+id/and"
-        android:layout_toEndOf="@+id/and"
-        android:textColorLink="@color/link" />
-
 
 </RelativeLayout>

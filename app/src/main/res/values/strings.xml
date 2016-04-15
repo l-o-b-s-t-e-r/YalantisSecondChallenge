@@ -7,14 +7,19 @@
     <string name="status_progress">В роботі</string>
     <string name="status_done">Виконано</string>
     <string name="status_waiting">Очікує</string>
+
+    <string name="municipal">Комунальне господарство</string>
+    <string name="building">Благоустрій та будівництво</string>
+
     <string name="filter">filter</string>
     
     <string name="open_menu">Open</string>
     <string name="close_menu">Close</string>
     
-    <string name="it_ruh"><a href="www.itruh.dp.ua">IT Ruh Dnipro</a></string>
-    <string name="yalantis"><a href="https://yalantis.com">Yalantis</a></string>
+    <string name="links"><a href="www.itruh.dp.ua">IT Ruh Dnipro</a> та <a href="https://yalantis.com">Yalantis</a></string>
 
     <string name="hear_titel">e-contact</string>
+
+    <string name="address">ул Пушкина до Колотушкина</string>
 
 </resources>
