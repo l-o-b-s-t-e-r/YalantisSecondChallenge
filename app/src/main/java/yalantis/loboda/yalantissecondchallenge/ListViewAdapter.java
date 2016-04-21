@@ -9,6 +9,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -59,8 +61,23 @@ public class ListViewAdapter extends ArrayAdapter<CardContent> {
             mOrganizationName.setText(getContext().getString(cardContent.getOrganisation().getNameId()));
             mLikeCount.setText(String.valueOf(cardContent.getLikesCount()));
             mAddress.setText(cardContent.getAddress());
-            mDate.setText(cardContent.getDate().toString());
-            mDays.setText(String.valueOf(cardContent.getDays()));
+            mDate.setText(getFormattedDate(cardContent.getDate()));
+            mDays.setText(getFormattedDays(cardContent.getDays()));
+        }
+
+        public String getFormattedDays(int days) {
+            return String.valueOf(days) + " " + getContext().getString(R.string.days);
+        }
+
+        public String getFormattedDate(Date date) {
+            Calendar calendar = Calendar.getInstance();
+            calendar.setTime(date);
+
+            String month = getContext().getResources().getStringArray(R.array.month)[calendar.get(Calendar.MONTH)];
+            String day = String.valueOf(calendar.get(Calendar.DAY_OF_MONTH));
+            String year = String.valueOf(calendar.get(Calendar.YEAR));
+
+            return month + " " + day + ", " + year;
         }
     }
 }

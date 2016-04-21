@@ -1,7 +1,9 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="yalantis.loboda.yalantissecondchallenge.ListViewFragment">
 
     <ListView
@@ -11,10 +13,18 @@
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:layout_marginTop="15dp"
-        android:divider="@color/colorPrimary"
+        android:divider="@android:color/transparent"
         android:dividerHeight="15dp">
-
-
     </ListView>
 
-</FrameLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/f_a_b_2_x"
+        app:backgroundTint="@color/floating_button"
+        app:layout_behavior="yalantis.loboda.yalantissecondchallenge.ScrollAwareFABBehavior" />
+
+</android.support.design.widget.CoordinatorLayout>

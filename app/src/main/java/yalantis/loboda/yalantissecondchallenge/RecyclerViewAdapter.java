@@ -3,14 +3,13 @@ package yalantis.loboda.yalantissecondchallenge;
 import android.content.Context;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -69,8 +68,23 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             mOrganizationName.setText(mContext.getString(cardContent.getOrganisation().getNameId()));
             mLikeCount.setText(String.valueOf(cardContent.getLikesCount()));
             mAddress.setText(cardContent.getAddress());
-            mDate.setText(cardContent.getDate().toString());
-            mDays.setText(String.valueOf(cardContent.getDays()));
+            mDate.setText(getFormattedDate(cardContent.getDate()));
+            mDays.setText(getFormattedDays(cardContent.getDays()));
+        }
+
+        public String getFormattedDays(int days) {
+            return String.valueOf(days) + " " + mContext.getString(R.string.days);
+        }
+
+        public String getFormattedDate(Date date) {
+            Calendar calendar = Calendar.getInstance();
+            calendar.setTime(date);
+
+            String month = mContext.getResources().getStringArray(R.array.month)[calendar.get(Calendar.MONTH)];
+            String day = String.valueOf(calendar.get(Calendar.DAY_OF_MONTH));
+            String year = String.valueOf(calendar.get(Calendar.YEAR));
+
+            return month + " " + day + ", " + year;
         }
     }
 }

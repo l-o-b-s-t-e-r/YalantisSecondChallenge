@@ -1,10 +1,8 @@
 package yalantis.loboda.yalantissecondchallenge;
 
-import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
-import android.util.Log;
 
 import java.util.List;
 
@@ -22,7 +20,6 @@ public class TabAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        Log.i("OK","ERROR");
         return mFragments.get(position);
     }
 
@@ -33,7 +30,7 @@ public class TabAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public CharSequence getPageTitle(int position) {
-        return "Title " + position;
+        return mFragments.get(position).getArguments().getString(MainActivity.TITLE);
     }
 
 }

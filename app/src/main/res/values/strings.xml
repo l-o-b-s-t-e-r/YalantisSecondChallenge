@@ -10,16 +10,40 @@
 
     <string name="municipal">Комунальне господарство</string>
     <string name="building">Благоустрій та будівництво</string>
+    <string name="mall">Торгівельний центр</string>
 
     <string name="filter">filter</string>
     
     <string name="open_menu">Open</string>
     <string name="close_menu">Close</string>
-    
-    <string name="links"><a href="www.itruh.dp.ua">IT Ruh Dnipro</a> та <a href="https://yalantis.com">Yalantis</a></string>
+
+    <string name="links"><a href="https://itruh.dp.ua">IT Ruh Dnipro</a> та <a href="https://yalantis.com">Yalantis</a></string>
 
     <string name="hear_titel">e-contact</string>
 
-    <string name="address">ул Пушкина до Колотушкина</string>
+    <string name="address_municipal">вул. Шевченко 8/15, Дніпропетровськ</string>
+    <string name="address_building">площ. Глінкі 10а, Дніпропетровськ</string>
+    <string name="address_mall">просп. Д.Яворницького 7, Дніпропетровськ</string>
+
+
+    <string name="questions_on_map">Звернення на мапі</string>
+    <string name="log_in">Увійти в аккаунт</string>
+
+    <string name="days">днів</string>
+
+    <string-array name="month">
+        <item>Січ.</item>
+        <item>Лют.</item>
+        <item>Бер.</item>
+        <item>Квіт.</item>
+        <item>Трав.</item>
+        <item>Чер.</item>
+        <item>Лип.</item>
+        <item>Серп.</item>
+        <item>Вер.</item>
+        <item>Жовт.</item>
+        <item>Лист.</item>
+        <item>Груд.</item>
+    </string-array>
 
 </resources>
