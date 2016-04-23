@@ -1,110 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:id="@+id/card_view"
+    style="@style/card_style"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="16dp"
-    card_view:cardBackgroundColor="@color/background_card"
-    card_view:cardCornerRadius="10dp">
+    android:theme="@style/card_style">
 
     <RelativeLayout
         android:id="@+id/relative_layout"
+        style="@style/card_layout_style"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingBottom="@dimen/padding_card_top_right_bottom"
-        android:paddingLeft="@dimen/padding_card_left"
-        android:paddingRight="@dimen/padding_card_top_right_bottom"
-        android:paddingTop="@dimen/padding_card_top_right_bottom">
+        android:layout_height="match_parent">
 
         <ImageView
             android:id="@+id/top_icon"
+            style="@style/card_top_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:alpha="0.5"
             android:src="@drawable/ic_trash" />
 
         <View
             android:id="@+id/separator"
+            style="@style/separator"
             android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:layout_alignBottom="@+id/likes_count"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="16dp"
-            android:layout_toRightOf="@+id/likes_count"
-            android:alpha="0.19"
-            android:background="@android:color/black" />
+            android:layout_height="match_parent" />
 
         <TextView
             android:id="@+id/title"
+            style="@style/card_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/top_icon"
-            android:layout_toRightOf="@+id/separator"
-            android:gravity="center"
-            android:text="Комунальне Господарство"
-            android:textColor="@android:color/black"
-            android:textSize="@dimen/title_card" />
+            android:text="Комунальне Господарство" />
 
         <TextView
             android:id="@+id/address"
+            style="@style/card_address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/title"
-            android:layout_below="@+id/title"
-            android:layout_marginTop="@dimen/margin_top_card"
-            android:singleLine="true"
-            android:text="вул. Б.Кротова, 22, Дніпропетровськ"
-            android:textColor="@color/card_text_color" />
+            android:text="вул. Б.Кротова, 22, Дніпропетровськ" />
 
         <ImageView
             android:id="@+id/like_icon"
+            style="@style/card_like_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/address"
-            android:layout_marginTop="8dp"
-            android:adjustViewBounds="true"
-            android:alpha="0.19"
             android:src="@drawable/ic_like" />
 
         <TextView
             android:id="@+id/likes_count"
+            style="@style/card_like_count"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@id/like_icon"
-            android:layout_marginLeft="@dimen/margin_small_left_card"
-            android:layout_toRightOf="@id/like_icon"
-            android:alpha="0.19"
-            android:gravity="center"
-            android:text="0"
-            android:textColor="@android:color/black"
-            android:textStyle="bold" />
+            android:text="0" />
 
 
         <TextView
             android:id="@+id/date"
+            style="@style/card_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/likes_count"
-            android:layout_alignLeft="@+id/title"
-            android:layout_alignTop="@id/likes_count"
-            android:gravity="center"
-            android:text="Лют. 09, 2016"
-            android:textColor="@color/card_text_color"
-            android:textStyle="bold" />
+            android:text="Лют. 09, 2016" />
 
         <TextView
             android:id="@+id/days"
+            style="@style/card_days"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/likes_count"
-            android:layout_alignParentRight="true"
-            android:layout_alignTop="@id/likes_count"
-            android:gravity="center"
-            android:text="7 днів"
-            android:textColor="@color/card_text_color"
-            android:textStyle="bold" />
+            android:text="7 днів" />
 
     </RelativeLayout>
 </android.support.v7.widget.CardView>

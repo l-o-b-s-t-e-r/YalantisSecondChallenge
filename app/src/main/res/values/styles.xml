@@ -1,5 +1,4 @@
 <resources>
-
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
@@ -8,6 +7,77 @@
         <item name="colorAccent">@android:color/white</item>
         <item name="android:windowBackground">@color/colorPrimary</item>
         <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="card_style" parent="CardView">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:background">@color/background_card</item>
+        <item name="cardCornerRadius">10dp</item>
+    </style>
+
+    <style name="card_title">
+        <item name="android:layout_alignTop">@id/top_icon</item>
+        <item name="android:layout_toRightOf">@id/separator</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/title_card</item>
+    </style>
+
+    <style name="card_top_icon">
+        <item name="android:alpha">0.5</item>
+    </style>
+
+    <style name="separator">
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_alignBottom">@id/like_icon</item>
+        <item name="android:layout_toRightOf">@id/top_icon</item>
+        <item name="android:layout_marginLeft">30dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:alpha">0.19</item>
+        <item name="android:background">@android:color/black</item>
+    </style>
+
+    <style name="card_layout_style">
+        <item name="android:paddingBottom">@dimen/padding_card_top_right_bottom</item>
+        <item name="android:paddingTop">@dimen/padding_card_top_right_bottom</item>
+        <item name="android:paddingRight">@dimen/padding_card_top_right_bottom</item>
+        <item name="android:paddingLeft">@dimen/padding_card_left</item>
+    </style>
+
+    <style name="card_address">
+        <item name="android:layout_marginTop">@dimen/margin_top_card</item>
+        <item name="android:layout_alignLeft">@id/title</item>
+        <item name="android:layout_below">@id/title</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:alpha">0.5</item>
+    </style>
+
+    <style name="card_like_icon">
+        <item name="android:layout_below">@id/address</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:alpha">0.19</item>
+    </style>
+
+    <style name="card_like_count">
+        <item name="android:layout_alignBottom">@id/like_icon</item>
+        <item name="android:layout_marginLeft">@dimen/margin_small_left_card</item>
+        <item name="android:layout_toRightOf">@id/like_icon</item>
+        <item name="android:alpha">0.19</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="card_date">
+        <item name="android:layout_alignBottom">@id/like_icon</item>
+        <item name="android:layout_alignLeft">@id/title</item>
+        <item name="android:alpha">0.5</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="card_days">
+        <item name="android:layout_alignBottom">@id/like_icon</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:alpha">0.5</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
