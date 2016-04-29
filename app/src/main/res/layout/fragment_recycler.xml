@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        android:src="@drawable/f_a_b_2_x"
+        android:src="@drawable/fab"
         app:backgroundTint="@color/floating_button"
         app:layout_behavior="yalantis.loboda.yalantissecondchallenge.ScrollAwareFABBehavior" />
 

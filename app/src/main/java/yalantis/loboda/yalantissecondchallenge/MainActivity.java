@@ -1,5 +1,6 @@
 package yalantis.loboda.yalantissecondchallenge;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -15,6 +16,7 @@ import android.text.method.LinkMovementMethod;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.TextView;
 
 import java.util.Arrays;
@@ -24,6 +26,8 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     public static final String TITLE = "TITLE";
+    public static final String DETAIL_INFO = "DETAIL_INFO";
+    public static AdapterView.OnItemClickListener onItemClickListener;
     public static List<CardContent> contents;
     private ViewPager mViewPager;
     private DrawerLayout mDrawerLayout;
@@ -77,6 +81,15 @@ public class MainActivity extends AppCompatActivity {
                 mDrawerLayout.openDrawer(Gravity.LEFT);
             }
         });
+
+        onItemClickListener = new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(MainActivity.this, DetailActivity.class);
+                intent.putExtra(MainActivity.DETAIL_INFO, position);
+                startActivity(intent);
+            }
+        };
     }
 
     @Override

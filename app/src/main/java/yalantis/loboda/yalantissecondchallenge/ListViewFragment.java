@@ -40,20 +40,22 @@ public class ListViewFragment extends Fragment implements Animation.AnimationLis
 
         mAnimationHide = AnimationUtils.loadAnimation(view.getContext(), R.anim.fab_anim_hide);
         mAnimationShow = AnimationUtils.loadAnimation(view.getContext(), R.anim.fab_anim_show);
-
         mAnimationHide.setAnimationListener(this);
         mAnimationShow.setAnimationListener(this);
 
         ListView listView = (ListView) view.findViewById(R.id.list_view);
         mFab = (FloatingActionButton) view.findViewById(R.id.fab);
 
+        listView.setOnItemClickListener(MainActivity.onItemClickListener);
         listView.setOnScrollListener(new AbsListView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(AbsListView view, int scrollState) {
-                if (scrollState == SCROLL_STATE_TOUCH_SCROLL) {
-                    mFab.startAnimation(mAnimationShow);
-                } else {
-                    mFab.startAnimation(mAnimationHide);
+                if (scrollState != SCROLL_STATE_TOUCH_SCROLL) {
+                    if (mFab.getVisibility() == View.VISIBLE && (mAnimationHide.hasEnded() == true || mAnimationHide.isInitialized() == false)) {
+                        mFab.startAnimation(mAnimationHide);
+                    } else if ((mAnimationShow.hasEnded() == true && mAnimationHide.hasEnded() == true) || mFab.getVisibility() == View.INVISIBLE) {
+                        mFab.startAnimation(mAnimationShow);
+                    }
                 }
             }
 

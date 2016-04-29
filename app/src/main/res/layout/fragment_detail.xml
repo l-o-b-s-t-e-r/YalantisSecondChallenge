@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="yalantis.loboda.yalantissecondchallenge.DetailFragment">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/top_icon"
+        android:layout_alignTop="@id/top_icon"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="Комунальне Господарство"
+        android:textSize="@dimen/title_card" />
+
+    <ImageView
+        android:id="@+id/top_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="100dp"
+        android:layout_toRightOf="@+id/title"
+        android:alpha="0.5"
+        android:src="@drawable/ic_trash" />
+
+
+    <ImageView
+        android:id="@+id/like_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/top_icon"
+        android:layout_marginLeft="@dimen/margin_left_card"
+        android:alpha="0.5"
+        android:src="@drawable/ic_like" />
+
+    <TextView
+        android:id="@+id/likes_count"
+        style="@style/card_like_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0" />
+
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/like_icon"
+        android:layout_below="@id/top_icon"
+        android:layout_marginTop="@dimen/margin_top_card"
+        android:text="вул. Б.Кротова, 22, Дніпропетровськ" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/like_icon"
+        android:layout_below="@id/address"
+        android:text="Лют. 09, 2016"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/days"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/address"
+        android:layout_below="@id/address"
+        android:text="7 днів"
+        android:textStyle="bold" />
+
+</RelativeLayout>

@@ -3,7 +3,7 @@
     <string name="action_settings">Settings</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    
+
     <string name="status_progress">В роботі</string>
     <string name="status_done">Виконано</string>
     <string name="status_waiting">Очікує</string>
@@ -13,7 +13,7 @@
     <string name="mall">Торгівельний центр</string>
 
     <string name="filter">filter</string>
-    
+
     <string name="open_menu">Open</string>
     <string name="close_menu">Close</string>
 
