@@ -1,4 +1,4 @@
-package yalantis.loboda.yalantissecondchallenge;
+package yalantis.loboda.yalantissecondchallenge.models;
 
 import java.util.Date;
 

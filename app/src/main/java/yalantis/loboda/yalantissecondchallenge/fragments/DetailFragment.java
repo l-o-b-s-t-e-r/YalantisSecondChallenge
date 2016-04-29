@@ -1,4 +1,4 @@
-package yalantis.loboda.yalantissecondchallenge;
+package yalantis.loboda.yalantissecondchallenge.fragments;
 
 
 import android.os.Bundle;
@@ -11,6 +11,10 @@ import android.widget.TextView;
 
 import java.util.Calendar;
 import java.util.Date;
+
+import yalantis.loboda.yalantissecondchallenge.R;
+import yalantis.loboda.yalantissecondchallenge.activities.MainActivity;
+import yalantis.loboda.yalantissecondchallenge.models.CardContent;
 
 
 public class DetailFragment extends Fragment {

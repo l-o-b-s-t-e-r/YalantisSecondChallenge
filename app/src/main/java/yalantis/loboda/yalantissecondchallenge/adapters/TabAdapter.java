@@ -1,10 +1,12 @@
-package yalantis.loboda.yalantissecondchallenge;
+package yalantis.loboda.yalantissecondchallenge.adapters;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 import java.util.List;
+
+import yalantis.loboda.yalantissecondchallenge.activities.MainActivity;
 
 /**
  * Created by macos on 10.04.16.

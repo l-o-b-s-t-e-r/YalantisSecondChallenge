@@ -1,4 +1,4 @@
-package yalantis.loboda.yalantissecondchallenge;
+package yalantis.loboda.yalantissecondchallenge.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -22,6 +22,13 @@ import android.widget.TextView;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
+
+import yalantis.loboda.yalantissecondchallenge.R;
+import yalantis.loboda.yalantissecondchallenge.adapters.TabAdapter;
+import yalantis.loboda.yalantissecondchallenge.fragments.ListViewFragment;
+import yalantis.loboda.yalantissecondchallenge.fragments.RecyclerViewFragment;
+import yalantis.loboda.yalantissecondchallenge.models.CardContent;
+import yalantis.loboda.yalantissecondchallenge.models.Organization;
 
 public class MainActivity extends AppCompatActivity {
 

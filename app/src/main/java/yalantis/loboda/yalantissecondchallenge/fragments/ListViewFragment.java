@@ -1,4 +1,4 @@
-package yalantis.loboda.yalantissecondchallenge;
+package yalantis.loboda.yalantissecondchallenge.fragments;
 
 
 import android.os.Bundle;
@@ -12,6 +12,10 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.AbsListView;
 import android.widget.ListView;
+
+import yalantis.loboda.yalantissecondchallenge.R;
+import yalantis.loboda.yalantissecondchallenge.activities.MainActivity;
+import yalantis.loboda.yalantissecondchallenge.adapters.ListViewAdapter;
 
 
 public class ListViewFragment extends Fragment implements Animation.AnimationListener {

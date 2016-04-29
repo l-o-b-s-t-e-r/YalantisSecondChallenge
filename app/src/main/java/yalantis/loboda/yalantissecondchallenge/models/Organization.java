@@ -1,4 +1,6 @@
-package yalantis.loboda.yalantissecondchallenge;
+package yalantis.loboda.yalantissecondchallenge.models;
+
+import yalantis.loboda.yalantissecondchallenge.R;
 
 /**
  * Created by Lobster on 15.04.16.

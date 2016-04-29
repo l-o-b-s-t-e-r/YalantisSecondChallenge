@@ -1,7 +1,10 @@
-package yalantis.loboda.yalantissecondchallenge;
+package yalantis.loboda.yalantissecondchallenge.activities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+
+import yalantis.loboda.yalantissecondchallenge.R;
+import yalantis.loboda.yalantissecondchallenge.fragments.DetailFragment;
 
 public class DetailActivity extends AppCompatActivity {
 

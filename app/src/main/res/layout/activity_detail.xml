@@ -4,7 +4,7 @@
     android:id="@+id/fragment_detail"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="yalantis.loboda.yalantissecondchallenge.DetailActivity">
+    tools:context=".activities.DetailActivity">
 
     <include layout="@layout/fragment_detail" />
 
