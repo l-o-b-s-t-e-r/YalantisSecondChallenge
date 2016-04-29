@@ -3,6 +3,7 @@ package yalantis.loboda.yalantissecondchallenge;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,8 +24,9 @@ public class ListViewFragment extends Fragment implements Animation.AnimationLis
 
     }
 
-    static public Fragment newInstance(String title) {
+    static public Fragment newInstance(String title, TabLayout tabLayout) {
         ListViewFragment f = new ListViewFragment();
+        tabLayout.addTab(tabLayout.newTab());
 
         Bundle args = new Bundle();
         args.putString(MainActivity.TITLE, title);

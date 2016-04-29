@@ -57,14 +57,11 @@ public class MainActivity extends AppCompatActivity {
         FragmentManager fragmentManager = getSupportFragmentManager();
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
-        tabLayout.addTab(tabLayout.newTab().setText(getString(R.string.status_progress)));
-        tabLayout.addTab(tabLayout.newTab().setText(getString(R.string.status_done)));
-        tabLayout.addTab(tabLayout.newTab().setText(getString(R.string.status_waiting)));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
-        List<Fragment> fragments = Arrays.asList(RecyclerViewFragment.newInstance(getString(R.string.status_progress)),
-                RecyclerViewFragment.newInstance(getString(R.string.status_done)),
-                ListViewFragment.newInstance(getString(R.string.status_waiting)));
+        List<Fragment> fragments = Arrays.asList(RecyclerViewFragment.newInstance(getString(R.string.status_progress), tabLayout),
+                RecyclerViewFragment.newInstance(getString(R.string.status_done), tabLayout),
+                ListViewFragment.newInstance(getString(R.string.status_waiting), tabLayout));
 
         FragmentStatePagerAdapter tabAdapter = new TabAdapter(fragmentManager, fragments);
         mViewPager.setAdapter(tabAdapter);

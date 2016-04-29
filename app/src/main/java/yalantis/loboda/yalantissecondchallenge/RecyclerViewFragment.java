@@ -2,6 +2,7 @@ package yalantis.loboda.yalantissecondchallenge;
 
 
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -16,8 +17,9 @@ public class RecyclerViewFragment extends Fragment {
 
     }
 
-    static public Fragment newInstance(String title) {
+    static public Fragment newInstance(String title, TabLayout tabLayout) {
         RecyclerViewFragment f = new RecyclerViewFragment();
+        tabLayout.addTab(tabLayout.newTab());
 
         Bundle args = new Bundle();
         args.putString(MainActivity.TITLE, title);
